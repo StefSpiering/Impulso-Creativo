@@ -1,0 +1,397 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
+    background-image: url('micro.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 5rem 0; /* Aumenta el padding para hacer el header más grande */
+    height: 450px; /* Aumenta la altura del header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    z-index: 1; /* Asegúrate de que esté debajo del contenido */
+}
+
+header .logo,
+header nav {
+    position: relative;
+    z-index: 2; /* Asegúrate de que esté encima del pseudo-elemento */
+}
+
+/* Rest of your styles... */
+
+
+.logo h1 {
+    margin: 0;
+    font-size: 5rem; /* Aumenta el tamaño de la fuente del logo */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+    display: flex;
+    justify-content: center; /* Centra el menú */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Section Styles */
+section {
+    padding: 4rem 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* Estilo general para la sección de servicios */
+#services {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Color de fondo para la sección */
+}
+
+#services .container {
+    max-width: 1200px; /* Ancho máximo de la sección */
+    margin: 0 auto;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #181818;
+}
+
+/* Estilo para las tarjetas de servicio */
+.service {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Ancho máximo de cada tarjeta */
+    height: 170px; /* Altura de cada tarjeta */
+    margin: 20px auto; /* Espaciado y centrado de tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    border: 1px solid #ddd; /* Borde definido */
+}
+
+.service:hover {
+    transform: scale(1.05); /* Efecto de ampliación al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.service-content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-decoration: none; /* Quitar subrayado del enlace */
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    display: flex;
+    align-items: flex-end; /* Alinea el contenido al final */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    color: #fff;
+}
+
+.service-text {
+    padding: 20px;
+    text-align: center;
+}
+
+.service-text h3 {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.service-text p {
+    font-size: 1em;
+    margin: 10px 0 0;
+}
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service {
+        height: 200px;
+    }
+
+    .service-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .service-content p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .service h3 {
+        font-size: 1.5rem;
+    }
+
+    .service p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+#mission-vision {
+    padding: 15px 40px; /* Espacio alrededor */
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+.container {
+    max-width: 1500px; /* Ajusta el ancho máximo según tu diseño */
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 2rem;
+    color: #000000; /* Color del texto */
+}
+
+.mission-vision-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.card {
+    background-color: #f5f5f5; /* Fondo gris claro para las tarjetas */
+    border: 1px solid #dddddd; /* Borde gris claro */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Ocupa el mismo espacio */
+    max-width: 30%; /* Ancho máximo de las tarjetas */
+    min-height: 30px; /* Altura mínima de las tarjetas */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    position: relative; /* Para asegurar que los elementos dentro están posicionados correctamente */
+}
+
+.icon {
+    display: block;
+    margin: 0 auto 20px;
+    width: 60px; /* Tamaño del icono */
+    height: auto;
+}
+
+.card h3 {
+    color: #000000; /* Color del título */
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.card p {
+    color: #333333; /* Color del texto */
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.image {
+    flex: 1;
+    max-width: 70%;
+    position: relative; /* Para asegurar que la imagen se ajuste dentro del contenedor */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+    border-radius: 30px; /* Bordes redondeados para la imagen si se desea */
+}
+
+.image img {
+    width: 120%; /* Asegura que la imagen llene el contenedor */
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: white;
+    padding: 2rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Gallery Styles */
+/* Estilo para la sección de galería */
+#gallery {
+    background-color: #000000;
+    padding: 60px 20px; /* Ajusta el padding para dar más espacio a la sección */
+}
+
+#gallery h2 {
+    text-align: center;
+    margin-bottom: 30px; /* Mayor espacio debajo del título */
+    font-size: 2.5rem; /* Aumenta el tamaño de la fuente */
+    color: #ffffff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Aumenta el tamaño mínimo de las columnas */
+    gap: 20px; /* Mayor espacio entre las imágenes */
+    padding: 0;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px; /* Aumenta el radio de borde */
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2); /* Aumenta la sombra */
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo general para la sección de comunidad */
+/* Estilo general para la sección de comunidad */
+#community {
+    padding: 40px 20px;
+    background-color: #f4f4f9; /* Color de fondo de la sección */
+    text-align: center; /* Centra el contenido del texto en la sección */
+}
+
+#community .container {
+    max-width: 1200px; /* Ancho máximo de la sección */
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    justify-content: space-between; /* Espacia los elementos para que se alineen a los extremos */
+}
+
+#community .text-content {
+    flex: 1; /* Permite que el contenido de texto use el espacio disponible */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+#community h2 {
+    font-size: 4.5em;
+    margin-bottom: 35px;
+    color: #161616;
+}
+
+#community p {
+    font-size: 1.2em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+#community .image-content {
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
+}
+
+#community img {
+    width: 190px; /* Ajusta el ancho de la imagen a tu preferencia */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.btn-join {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #000000; /* Color del botón */
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 20px; /* Espacio superior del botón */
+}
+
+.btn-join:hover {
+    background-color: #002042; /* Color del botón en estado hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+}
