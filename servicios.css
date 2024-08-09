@@ -18,7 +18,7 @@ body, html {
 /* Header Styles */
 header {
     background-image: url('micro.png');
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
     background-size: cover;
     background-position: center;
     color: white;
