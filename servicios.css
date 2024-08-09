@@ -15,7 +15,7 @@ body, html {
     padding: 20px;
 }
 
-/* Header Styles */
+
 header {
     position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
     background-image: url('micro.png');
@@ -23,7 +23,7 @@ header {
     background-position: center;
     color: white;
     padding: 5rem 0; /* Aumenta el padding para hacer el header más grande */
-    height: 450px; /* Aumenta la altura del header */
+    height: 250px; /* Aumenta la altura del header */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,28 +42,12 @@ header::before {
     z-index: 1; /* Asegúrate de que esté debajo del contenido */
 }
 
+
 header .logo,
 header nav {
     position: relative;
     z-index: 2; /* Asegúrate de que esté encima del pseudo-elemento */
 }
-/* General Styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-
-
 
 
 nav ul {
@@ -160,3 +144,4 @@ footer p {
         padding: 20px;
     }
 }
+
